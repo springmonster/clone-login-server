@@ -1,0 +1,18 @@
+GET http://localhost:8080/login/validateHomerId?homerId=
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:8080/login/sendSmsCode
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "homerId": "1234",
+  "phoneNumber": "24234234234234"
+}
+
+###
+
