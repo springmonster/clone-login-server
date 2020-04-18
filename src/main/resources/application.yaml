@@ -4,7 +4,7 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
 logging:
   level:
-    com.kuang.login.mapper: debug
+    com.kuang.login.repository: debug
 # server information
 server:
   port: 8080
@@ -13,4 +13,4 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
-    url: jdbc:mysql://127.0.0.1:3306/homer?characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/sales_network?characterEncoding=utf-8&useSSL=false

@@ -1,7 +1,7 @@
 package com.kuang.login.service.impl;
 
-import com.kuang.login.entity.HomerEntity;
-import com.kuang.login.mapper.HomerMapper;
+import com.kuang.login.entity.UserEntity;
+import com.kuang.login.repository.UserRepository;
 import com.kuang.login.service.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class LoginServiceImpl implements LoginService {
     @Autowired
-    private HomerMapper homerMapper;
+    private UserRepository userRepository;
 
     @Override
-    public HomerEntity findByHomerId(String homerId) {
-        return homerMapper.findByHomerId(homerId);
+    public UserEntity findByHomerId(String homerId) {
+        return userRepository.findByUserId(homerId);
     }
 }

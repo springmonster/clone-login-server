@@ -1,19 +1,19 @@
-package com.kuang.login.mapper;
+package com.kuang.login.repository;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
-public class HomerMapperTest {
+public class UserRepositoryTest {
 
     @Autowired
-    private HomerMapper homerMapper;
+    private UserRepository userRepository;
 
     @Test
     public void findByHomerId() {
-        assertNotNull(homerMapper.findByHomerId("1234"));
+        assertNotNull(userRepository.findByUserId("1234"));
     }
 }

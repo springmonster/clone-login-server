@@ -1,4 +1,4 @@
-GET http://localhost:8080/login/validateHomerId?homerId=
+GET http://localhost:8080/login/validateHomerId?userId=1234
 Accept: */*
 Cache-Control: no-cache
 
@@ -10,8 +10,8 @@ Cache-Control: no-cache
 Content-Type: application/json
 
 {
-  "homerId": "1234",
-  "phoneNumber": "24234234234234"
+  "userId": "1234",
+  "phoneNumber": "13012344321"
 }
 
 ###

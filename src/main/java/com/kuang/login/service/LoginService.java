@@ -1,8 +1,8 @@
 package com.kuang.login.service;
 
-import com.kuang.login.entity.HomerEntity;
+import com.kuang.login.entity.UserEntity;
 
 public interface LoginService {
 
-    HomerEntity findByHomerId(String homerId);
+    UserEntity findByHomerId(String homerId);
 }

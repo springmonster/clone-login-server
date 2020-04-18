@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.kuang.login.mapper")
+@MapperScan("com.kuang.login.repository")
 public class LoginApplication {
 
     public static void main(String[] args) {

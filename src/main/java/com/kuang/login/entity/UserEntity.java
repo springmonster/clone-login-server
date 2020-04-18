@@ -1,23 +1,25 @@
 package com.kuang.login.entity;
 
-import java.io.Serializable;
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
- * homer
- * @author 
+ * user
+ *
+ * @author
  */
 @Data
-public class HomerEntity implements Serializable {
+public class UserEntity implements Serializable {
     /**
      * 主键
      */
     private Integer id;
 
     /**
-     * homer id
+     * user id
      */
-    private String homerId;
+    private String userId;
 
     private static final long serialVersionUID = 1L;
 }

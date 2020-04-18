@@ -2,7 +2,7 @@ package com.kuang.login.controller;
 
 import com.kuang.login.dto.SmsRequestDto;
 import com.kuang.login.dto.SmsResponseDto;
-import com.kuang.login.entity.HomerEntity;
+import com.kuang.login.entity.UserEntity;
 import com.kuang.login.enums.LoginEnum;
 import com.kuang.login.enums.SmsEnum;
 import com.kuang.login.exceptions.BaseException;
@@ -34,13 +34,13 @@ public class LoginController {
 
     @Validated
     @GetMapping("/validateHomerId")
-    public ResultVO validateHomerId(@NotEmpty(message = "homer id不能为空")
-                                    @RequestParam(required = true, name = "homerId") String homerId) {
-        HomerEntity homerEntity = loginService.findByHomerId(homerId);
+    public ResultVO validateHomerId(@NotEmpty(message = "user id不能为空")
+                                    @RequestParam(required = true, name = "userId") String userId) {
+        UserEntity userEntity = loginService.findByHomerId(userId);
 
-        log.info("查询出的homer数据是 {}", homerEntity);
+        log.info("查询出的homer数据是 {}", userEntity);
 
-        if (ObjectUtils.isEmpty(homerEntity)) {
+        if (ObjectUtils.isEmpty(userEntity)) {
             throw new BaseException(LoginEnum.VALIDATE_HOMER_ID_FAIL.getCode(), LoginEnum.VALIDATE_HOMER_ID_FAIL.getMsg());
         }
 
