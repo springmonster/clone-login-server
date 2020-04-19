@@ -4,12 +4,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class RedisUtilTest {
+public class CacheUtilTest {
 
     @Test
     public void generateTokenKey() {
-        String token = RedisUtil.generateToken();
-        String redisKey = RedisUtil.getTokenKey(token);
+        String token = CacheUtil.generateToken();
+        String redisKey = CacheUtil.getTokenKey(token);
         System.out.println(redisKey);
     }
 }

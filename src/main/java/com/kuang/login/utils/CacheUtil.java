@@ -2,7 +2,7 @@ package com.kuang.login.utils;
 
 import java.util.UUID;
 
-public class RedisUtil {
+public class CacheUtil {
     private static final String tokenKeyPrefix = "user:token:";
     private static final String smsCodeKeyPrefix = "user:sms:";
 

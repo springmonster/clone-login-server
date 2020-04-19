@@ -17,7 +17,7 @@ public class LoginServiceImpl implements LoginService {
     private CacheRepository cacheRepository;
 
     @Override
-    public UserEntity findByHomerId(String homerId) {
+    public UserEntity findByUserId(String homerId) {
         return userRepository.findByUserId(homerId);
     }
 

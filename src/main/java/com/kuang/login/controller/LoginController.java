@@ -39,7 +39,7 @@ public class LoginController {
     @GetMapping("/user/{userId}")
     public ResultVO validateHomerId(@NotEmpty(message = "user id不能为空")
                                     @PathVariable(required = true, name = "userId") String userId) {
-        UserEntity userEntity = loginService.findByHomerId(userId);
+        UserEntity userEntity = loginService.findByUserId(userId);
 
         log.info("查询出的homer数据是 {}", userEntity);
 

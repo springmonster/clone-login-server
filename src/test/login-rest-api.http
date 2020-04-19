@@ -14,6 +14,11 @@ Content-Type: application/json
   "phoneNumber": "13012344321"
 }
 
+> {%
+client.log(response.body.data.smsCode);
+client.global.set("smsCode",response.body.data.smsCode);
+%}
+
 ###
 
 POST http://localhost:8080/login/session
@@ -23,8 +28,7 @@ Content-Type: application/json
 
 {
   "userId": "1234",
-  "smsCode": "4563"
+  "smsCode": {{smsCode}}
 }
-
 ###
 

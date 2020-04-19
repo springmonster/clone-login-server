@@ -4,7 +4,7 @@ import com.kuang.login.entity.UserEntity;
 
 public interface LoginService {
 
-    UserEntity findByHomerId(String homerId);
+    UserEntity findByUserId(String homerId);
 
     String generateUserToken();
 }
