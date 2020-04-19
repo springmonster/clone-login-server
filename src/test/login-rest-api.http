@@ -1,10 +1,10 @@
-GET http://localhost:8080/login/validateHomerId?userId=1234
+GET http://localhost:8080/login/user/1234
 Accept: */*
 Cache-Control: no-cache
 
 ###
 
-POST http://localhost:8080/login/sendSmsCode
+POST http://localhost:8080/login/sms
 Accept: */*
 Cache-Control: no-cache
 Content-Type: application/json
@@ -12,6 +12,18 @@ Content-Type: application/json
 {
   "userId": "1234",
   "phoneNumber": "13012344321"
+}
+
+###
+
+POST http://localhost:8080/login/session
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{
+  "userId": "1234",
+  "smsCode": "4563"
 }
 
 ###

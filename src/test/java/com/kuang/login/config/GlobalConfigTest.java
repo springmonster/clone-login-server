@@ -1,6 +1,5 @@
-package com.kuang.login.service.impl;
+package com.kuang.login.config;
 
-import com.kuang.login.service.SmsService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -8,12 +7,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class LoginServiceImplTest {
+class GlobalConfigTest {
+
     @Autowired
-    private SmsService smsService;
+    GlobalConfig globalConfig;
 
     @Test
-    public void generateSmsCode() {
-        assertEquals(4, smsService.generateSmsCode().getSmsCode().length());
+    public void testConfig() {
+        assertEquals(3, Integer.valueOf(globalConfig.getSmsRetryTimes()));
+        assertEquals(60, Integer.valueOf(globalConfig.getSmsTimeout()));
     }
 }
